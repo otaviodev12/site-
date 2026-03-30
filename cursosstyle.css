@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background: #031164;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #f1f6f8;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* MENU */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px;
+  border-radius: 3px;
+  z-index: 9999;
+}
+.nossos{
+  position: absolute;
+  color: white;
+  left: 40%;
+  top: 10%;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #000000;
+    display: none;
+    z-index: 9999;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 9999;
+  }
+}
+
+.nossos-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  top: 35%;
+  width: 260px;
+  border: 1px solid #1e0ace;
+  /* cor da borda */
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: auto;
+}
+
+.produto-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #080202;
+}
+
+.tag-indicado {
+  display: inline-block;
+  background-color: #3e0fe9;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.descricao {
+  flex-grow: 1;
+}
+
+.nome-produto {
+  font-size: 14px;
+  margin: 4px 0;
+  font-weight: 600;
+  color: #ebe4e4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preco {
+  font-size: 16px;
+  color: #f1efee;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.vendidos {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 8px 0;
+}
+
+.btn-similares {
+  background-color: #091f99;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-similares:hover {
+  background-color: #1e84e4;
+}
